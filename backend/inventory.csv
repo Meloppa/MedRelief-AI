@@ -1,0 +1,21 @@
+Item,Weight (kg),Volume (L),Priority,ExpiryDays,DemandScore
+Antibiotics (Bulk),40.0,20.0,10,365,0.95
+IV Fluids (Case),80.0,60.0,8,730,0.90
+Insulin Cooler,15.0,20.0,10,60,0.85
+Emergency Bandages,10.0,30.0,7,1000,0.90
+Portable Oxygen Tank,35.0,25.0,9,1800,0.70
+Surgical Kit (Major),25.0,15.0,9,1000,0.60
+First Aid Kits (Small),20.0,40.0,6,730,0.80
+Defibrillator (AED),12.0,15.0,8,1800,0.40
+Antimalarial Meds,5.0,5.0,9,365,0.85
+Water Purification Tablets,2.0,5.0,10,1000,0.95
+Rehydration Salts (ORS),30.0,45.0,9,730,0.95
+Basic Splints,12.0,25.0,5,2000,0.50
+Burn Treatment Gel,8.0,10.0,7,500,0.60
+Tetanus Vaccines,5.0,10.0,8,180,0.75
+Field Stretcher (Folding),15.0,35.0,6,3000,0.40
+Portable Ultrasound,10.0,12.0,7,2000,0.30
+Blood Pressure Cuffs,4.0,10.0,5,2000,0.50
+Gloves & PPE Box,15.0,50.0,8,1000,0.90
+Disinfectant (Gallon),20.0,15.0,7,730,0.70
+Pain Relief (Liquid),10.0,8.0,8,500,0.80

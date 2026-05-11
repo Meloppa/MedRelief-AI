@@ -1,0 +1,19 @@
+# Next.js / Frontend
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+
+# Python / Backend
+__pycache__/
+venv/
+env/
+.env
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local data
+.ipynb_checkpoints/
