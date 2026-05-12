@@ -88,40 +88,33 @@ ollama serve
 
 🐍 Step 3: Backend Setup (FastAPI)
 
-Navigate to the backend folder:
-
+1) Navigate to the backend folder (in Git Bash) terminal:
 cd backend
-Create Virtual Environment
 
-Windows
+2)Create Virtual Environment
 python -m venv venv
-venv\Scripts\activate
+source venv/Scripts/activate
 
-macOS/Linux
-
-python3 -m venv venv
-source venv/bin/activate
-
-Install Dependencies
+3) Install Dependencies
 pip install -r requirements.txt
 
-Start the Backend Server
-python main.py
+4) Start the Backend Server
+uvicorn main:app --reload
 
 The backend will be available at:
 
 API Base URL: http://localhost:8000
-API Docs (Swagger): http://localhost:8000/docs
+API Docs (Swagger): http://localhost:8000/docs <-- copy and paste in chrome
 
 
 ⚛️ Step 4: Frontend Setup (Next.js)
 
-Open a new terminal and navigate to the frontend directory:
+1) Open a new terminal (Git Bash) and navigate to the frontend directory:
 cd frontend
 
-Install Dependencies:
+2) Install Dependencies:
 npm install
-Start Development Server:
+3) Start Development Server:
 npm run dev
 
 The frontend will be available at:
