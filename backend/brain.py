@@ -1,4 +1,7 @@
+import os
 import requests
+
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 
 def ask_gemma(mission_type, selected_items):
     item_names = ", ".join(selected_items['Item'].tolist())
@@ -15,8 +18,9 @@ def ask_gemma(mission_type, selected_items):
     
     try:
         response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={"model": "gemma", "prompt": prompt, "stream": False}
+            f"{OLLAMA_URL}/api/generate",
+            json={"model": "gemma", "prompt": prompt, "stream": False},
+            timeout=30,
         )
         return response.json().get('response', "Error: No response from Gemma.")
     except Exception as e:

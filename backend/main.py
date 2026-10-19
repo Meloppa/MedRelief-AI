@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
+from pathlib import Path
 from optimizer import MedicalGA
 from brain import ask_gemma
 
@@ -14,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/optimize")
+@app.post("/api/optimize")
 async def optimize(data: dict):
     # Get inputs from Frontend
     weight_limit = data.get("weight_limit", 500)
@@ -22,7 +23,7 @@ async def optimize(data: dict):
     mission_type = data.get("mission_type", "Flood")
     
     # Run GA
-    df = pd.read_csv("inventory.csv")
+    df = pd.read_csv(Path(__file__).parent / "inventory.csv")
     ga = MedicalGA(df, weight_limit, volume_limit)
     best_bits = ga.solve()
     selected_items = df[best_bits == 1]

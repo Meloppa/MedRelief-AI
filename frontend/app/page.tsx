@@ -15,7 +15,7 @@ export default function MedReliefDashboard() {
   const runOptimization = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/optimize', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL ?? ''}/api/optimize`, {
         weight_limit: weightLimit,
         volume_limit: volumeLimit, 
         mission_type: mission
